@@ -100,8 +100,8 @@ export default function Home() {
           <motion.div variants={itemVariants} className="inline-block mb-4 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-muted-foreground text-sm tracking-wide">
             Portfólio 2024
           </motion.div>
-          <motion.h1 variants={itemVariants} className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter mb-6 text-foreground">
-            Gustavo<br />Simplício
+          <motion.h1 variants={itemVariants} className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter mb-6 text-foreground whitespace-nowrap">
+            Gustavo Simplício
           </motion.h1>
           <motion.h2 variants={itemVariants} className="text-xl md:text-3xl text-muted-foreground font-light tracking-wide mb-10">
             Designer Gráfico <span className="text-primary/40 mx-2">|</span> Web Designer
@@ -110,7 +110,7 @@ export default function Home() {
             Criando experiências digitais e visuais com precisão cirúrgica. 
             No cruzamento entre a arte visual e o desenvolvimento web, onde cada pixel conta uma história.
           </motion.p>
-          <motion.div variants={itemVariants}>
+          <motion.div variants={itemVariants} className="mb-24">
             <Button size="lg" className="rounded-full px-8 py-6 text-base group bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300" onClick={() => document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' })}>
               Ver Trabalhos
               <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -127,31 +127,19 @@ export default function Home() {
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
             variants={containerVariants}
-            className="grid grid-cols-1 lg:grid-cols-2 gap-16"
           >
             <div>
               <motion.h3 variants={itemVariants} className="text-3xl md:text-4xl font-bold mb-8">Sobre Mim</motion.h3>
               <motion.p variants={itemVariants} className="text-muted-foreground text-lg leading-relaxed mb-6">
-                Sou um designer baseado em João Pessoa, PB, especializado em traduzir identidades complexas em interfaces e peças gráficas marcantes. Minha abordagem é definida pela busca constante do equilíbrio entre forma e função.
+                Sou designer gráfico e desenvolvedor web, especializado em criar experiências visuais que unem estética, funcionalidade e estratégia. Meu trabalho vai além do design: busco entender a essência de cada projeto para transformar ideias em soluções digitais que realmente geram impacto.
+              </motion.p>
+              <motion.p variants={itemVariants} className="text-muted-foreground text-lg leading-relaxed mb-6">
+                Atuo na criação de identidades visuais, artes digitais e interfaces modernas, sempre com foco em transmitir credibilidade, clareza e profissionalismo. No desenvolvimento web, construo sites responsivos, rápidos e bem estruturados, pensados para oferecer a melhor experiência ao usuário e fortalecer a presença online de marcas e negócios.
               </motion.p>
               <motion.p variants={itemVariants} className="text-muted-foreground text-lg leading-relaxed">
-                Acredito que o bom design não deve gritar para ser notado. Ele deve sussurrar confiança e guiar o usuário de forma intuitiva, criando uma impressão duradoura.
+                Acredito que um bom design não é apenas bonito — ele comunica, conecta e converte. Por isso, cada projeto que desenvolvo é pensado nos mínimos detalhes, unindo criatividade, tecnologia e estratégia para entregar resultados reais.
               </motion.p>
             </div>
-            <motion.div variants={itemVariants} className="flex flex-col justify-center space-y-6 bg-background/50 p-8 rounded-2xl border border-white/5">
-              <div className="flex items-center text-muted-foreground hover:text-foreground transition-colors">
-                <MapPin className="w-5 h-5 mr-4 text-primary/50" />
-                <span>Rua Dr. Valdevino Gregório de Andrade, 800 – Gramame, João Pessoa - PB</span>
-              </div>
-              <a href="mailto:gustavo.simplicioweb@gmail.com" className="flex items-center text-muted-foreground hover:text-foreground transition-colors">
-                <Mail className="w-5 h-5 mr-4 text-primary/50" />
-                <span>gustavo.simplicioweb@gmail.com</span>
-              </a>
-              <a href="https://wa.me/5583981926225" target="_blank" rel="noreferrer" className="flex items-center text-muted-foreground hover:text-foreground transition-colors">
-                <Phone className="w-5 h-5 mr-4 text-primary/50" />
-                <span>+55 83 98192-6225</span>
-              </a>
-            </motion.div>
           </motion.div>
         </div>
       </section>
@@ -204,6 +192,34 @@ export default function Home() {
             
             <motion.div variants={itemVariants} className="relative aspect-video rounded-2xl overflow-hidden bg-background border border-white/10 group cursor-pointer shadow-2xl">
               <VideoPlayer />
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Contact Info Section */}
+      <section className="py-20 px-6 border-b border-white/5">
+        <div className="max-w-3xl mx-auto">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={containerVariants}
+          >
+            <motion.h3 variants={itemVariants} className="text-2xl md:text-3xl font-bold mb-10 text-center">Contato & Localização</motion.h3>
+            <motion.div variants={itemVariants} className="flex flex-col space-y-6 bg-card/50 p-8 rounded-2xl border border-white/5">
+              <div className="flex items-start text-muted-foreground hover:text-foreground transition-colors">
+                <MapPin className="w-5 h-5 mr-4 mt-0.5 shrink-0 text-primary/50" />
+                <span>Rua Dr. Valdevino Gregório de Andrade, 800 – Gramame, João Pessoa - PB</span>
+              </div>
+              <a href="mailto:gustavo.simplicioweb@gmail.com" className="flex items-center text-muted-foreground hover:text-foreground transition-colors">
+                <Mail className="w-5 h-5 mr-4 shrink-0 text-primary/50" />
+                <span>gustavo.simplicioweb@gmail.com</span>
+              </a>
+              <a href="https://wa.me/5583981926225" target="_blank" rel="noreferrer" className="flex items-center text-muted-foreground hover:text-foreground transition-colors">
+                <Phone className="w-5 h-5 mr-4 shrink-0 text-primary/50" />
+                <span>+55 83 98192-6225</span>
+              </a>
             </motion.div>
           </motion.div>
         </div>
