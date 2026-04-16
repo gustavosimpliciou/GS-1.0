@@ -42,6 +42,31 @@ function VideoPlayer() {
   );
 }
 
+function ProfilePhoto() {
+  const [error, setError] = useState(false);
+  const src = `${import.meta.env.BASE_URL}assets/profile.jpg`;
+  return (
+    <div className="relative w-28 h-28 rounded-full ring-2 ring-white/10 ring-offset-4 ring-offset-background overflow-hidden bg-white/5 flex items-center justify-center shadow-xl">
+      {!error ? (
+        <img
+          src={src}
+          alt="Gustavo Simplício"
+          className="w-full h-full object-cover"
+          onError={() => setError(true)}
+        />
+      ) : (
+        <svg
+          className="w-16 h-16 text-white/20"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+        >
+          <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z" />
+        </svg>
+      )}
+    </div>
+  );
+}
+
 function ArtworkTile({ art }: { art: { src: string; title: string; id: number } }) {
   const [error, setError] = useState(false);
   const grad = gradients[(art.id - 1) % gradients.length];
@@ -97,6 +122,9 @@ export default function Home() {
           animate="visible"
           variants={containerVariants}
         >
+          <motion.div variants={itemVariants} className="flex justify-center mb-6">
+            <ProfilePhoto />
+          </motion.div>
           <motion.div variants={itemVariants} className="inline-block mb-4 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-muted-foreground text-sm tracking-wide">
             Portfólio 2024
           </motion.div>
