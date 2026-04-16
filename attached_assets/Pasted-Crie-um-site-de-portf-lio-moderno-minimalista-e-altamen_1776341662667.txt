@@ -1,0 +1,98 @@
+Crie um site de portfólio moderno, minimalista e altamente profissional para um designer gráfico e web designer. O design deve transmitir credibilidade, sofisticação e organização, utilizando uma paleta de cores neutras (preto, branco e tons de cinza), com tipografia elegante e espaçamento bem estruturado.
+
+🎯 OBJETIVO
+
+Desenvolver um portfólio interativo, com foco em UX/UI, animações suaves e navegação fluida, que permita apresentar trabalhos visuais (artes) e serviços de criação de sites.
+
+🎨 DESIGN E ESTILO
+Estilo: Minimalista, moderno, clean e profissional
+Cores principais: preto (#0d0d0d), branco (#ffffff), cinza (#1a1a1a, #2a2a2a)
+Tipografia: fontes modernas como "Poppins" ou "Inter"
+Layout responsivo (mobile-first)
+Uso de microinterações e animações suaves (hover, fade-in, scale)
+Evitar elementos chamativos demais — foco em elegância e experiência
+🧠 ESTRUTURA DO SITE
+1. HERO SECTION (Topo)
+Fundo escuro com leve gradiente
+Nome em destaque: Gustavo Jesus de França Simplício
+Subtítulo: "Designer Gráfico & Web Designer"
+Pequena descrição profissional
+Botão de ação: "Ver Portfólio"
+Foto de perfil (lado direito ou central em mobile)
+Animação suave de entrada (fade + slide)
+2. SOBRE MIM
+Texto apresentando quem sou (designer gráfico)
+Informações:
+Endereço: Dr. Valdevino Gregório de Andrade Street, 800 – Gramame, João Pessoa - PB
+Telefone: +55 83 98192-6225
+Email: gustavo.simplicioweb@gmail.com
+Layout com ícones minimalistas
+Animação ao rolar a página
+3. GALERIA DE ARTES (PORTFÓLIO)
+Grid responsivo com imagens:
+art1.jpg
+art2.jpg
+art3.jpg
+art4.jpg ...
+Cada imagem deve ter:
+Efeito hover (zoom leve + overlay escuro com "Ver mais")
+Ao clicar:
+Abrir modal (lightbox)
+Exibir imagem em tamanho grande
+Fundo escurecido
+Botão de fechar elegante
+Transição suave (scale + fade)
+4. SEÇÃO DE VÍDEO (WEB DESIGN)
+Título: "Também desenvolvo sites"
+Subtítulo explicativo
+Campo de vídeo incorporado:
+video1.mp4
+Player moderno com bordas arredondadas
+Pequena descrição abaixo do vídeo
+5. CTA - SERVIÇOS
+Texto chamativo porém elegante:
+"Precisa de um site profissional ou design exclusivo?"
+Botão de WhatsApp fixo ou destacado
+6. BOTÃO WHATSAPP (FLUTUANTE)
+Botão fixo no canto inferior direito
+Ícone do WhatsApp
+Link direto para:
+https://wa.me/5583981926225
+Animação suave pulsante
+7. RODAPÉ
+Nome
+Direitos autorais
+Redes sociais (opcional)
+Estilo minimalista
+⚙️ FUNCIONALIDADES
+Scroll suave entre seções
+Animações com CSS ou biblioteca (ex: AOS ou Framer Motion)
+Modal funcional para imagens
+Responsividade total
+Código organizado (HTML, CSS, JS separados)
+💻 TECNOLOGIAS
+HTML5
+CSS3 (ou TailwindCSS opcional)
+JavaScript puro ou com biblioteca leve
+Opcional: usar GSAP ou AOS para animações
+✨ DIFERENCIAL
+
+O site deve transmitir sensação de:
+
+Profissionalismo
+Confiança
+Modernidade
+Experiência agradável ao usuário
+
+Evitar poluição visual. Priorizar espaçamento, alinhamento e fluidez.
+
+📁 ESTRUTURA DE ARQUIVOS
+index.html
+style.css
+script.js
+/assets
+art1.jpg, art2.jpg...
+video1.mp4
+profile.jpg
+
+Seja criativo na execução, mas mantenha o foco em um design elegante, funcional e agradável.
