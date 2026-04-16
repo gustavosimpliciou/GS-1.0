@@ -1,33 +1,22 @@
-import express, { type Express } from "express";
+import express, { type Express, type Request, type Response, type NextFunction } from "express";
 import cors from "cors";
 import router from "./routes";
 import { logger } from "./lib/logger";
 
 const app: Express = express();
 
-const setupLogger = async () => {
-  const pinoHttp = await import("pino-http");
-  const middleware = (pinoHttp.default ?? pinoHttp)({
-    logger,
-    serializers: {
-      req(req: { id: string; method: string; url?: string }) {
-        return {
-          id: req.id,
-          method: req.method,
-          url: req.url?.split("?")[0],
-        };
-      },
-      res(res: { statusCode: number }) {
-        return {
-          statusCode: res.statusCode,
-        };
-      },
-    },
+app.use((req: Request, res: Response, next: NextFunction) => {
+  const start = Date.now();
+  res.on("finish", () => {
+    logger.info({
+      method: req.method,
+      url: req.url.split("?")[0],
+      status: res.statusCode,
+      ms: Date.now() - start,
+    });
   });
-  app.use(middleware);
-};
-
-setupLogger();
+  next();
+});
 
 app.use(cors());
 app.use(express.json());
